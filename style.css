@@ -1,0 +1,179 @@
+html, *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: #000;
+}
+
+.main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 5px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 4px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 10px #fff,22vw -36vh 3px 2px #fff,-22vw -25vh 1px 2px #fff,2vw 36vh 3px 2px #fff,-22vw 26vh 3px 2px #fff,2vw 6vh 3px 2px #fff,22vw 36vh 3px 2px #fff,12vw -16vh 3px 2px #fff,32vw -26vh 3px 2px #fff,12vw -40vh 0px 2px #fff,-42vw 1vh 1px 0px #fff;
+    animation: zoom 7s  infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+
+
+}
+.main2{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #000000;
+    border-radius: 50%;
+    box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 0px 0px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-22vw -25vh 3px 2px #fff,2vw 36vh 3px 2px #fff,-22vw 26vh 3px 2px #fff,2vw 6vh 3px 2px #fff,22vw 36vh 3px 2px #fff,12vw -16vh 3px 2px #fff,32vw -26vh 3px 2px #fff,12vw -40vh 0px 2px #fff,-42vw 1vh 1px 0px #fff;
+    animation: poom 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+
+}
+
+
+.speed {
+    position: fixed;
+    z-index:10;
+    left: 50%;
+    transform-origin: left;
+    transform: scale(1) translateX(-50%);
+    bottom: 10em;
+    padding: 5em;
+    text-align: center;
+  border-radius: 10em;
+
+    box-shadow: 100em rgb(255, 255, 255);
+ 
+    animation: decreaseflash 0.5s;
+
+}
+.speed:focus{
+    transform: scale(.8) translateX(-50%) ;
+    animation: increasgeflash 0.5s;
+}
+
+.speed:focus + .main{
+    transition: all 1s;
+    animation: zoom 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+}
+.speed:focus + .main + .main2{
+    transition: all 1s;
+    animation: poom 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+}
+@keyframes decreaseflash {
+    0%{
+        box-shadow: 5em 10em 1em 100vw #7cfffb2d;
+    }
+    100% {
+        box-shadow: 5em 10em 1em 100vw #ffffff00;
+    }
+}
+@keyframes increaseflash {
+    0%{
+        box-shadow: 5em 10em 1em 100vw hsla(185, 100%, 74%, 0.176);
+    }
+    100% {
+        box-shadow: 5em 10em 1em 100vw #ffffff00;
+    }
+}
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+
+    }
+ 30% {
+    transform: scale(3);
+    opacity:0.5;
+ }
+    100%{
+        opacity: 0;
+        transform: scale(22);
+    }
+}
+@keyframes poom {
+    0%{
+        opacity: 0;
+        transform: scale(0.0);
+    }
+    50%{
+        opacity: 1;
+        transform: scale(0.3);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+section:nth-of-type(2)> div:nth-child(1) {
+    position: fixed;
+    bottom: 0em;
+    left: 55vw;
+    width: 3em;
+	height: 100vw;
+	transform: skew(31deg);
+	background: #555;
+    margin-left: auto;
+    margin-right: auto;
+}
+section:nth-of-type(2)> div:nth-child(2) {
+    position: fixed;
+    bottom: 0em;
+   right: 55vw;
+    width: 3em;
+	height: 100vw;
+	transform: skew(-31deg);
+	background: #555;
+    margin-left: auto;
+    margin-right: auto;
+}
+section:nth-of-type(2)> div:nth-child(3) {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+	border-top: 8vw solid #e6e6e6;
+	border-left: 10vw solid transparent;
+	border-right: 10vw solid transparent;
+	top: 0em;
+	width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+section:nth-of-type(2) > div:nth-child(4){
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+	border-bottom: 15em solid #acacac;
+	border-left: 20vw solid transparent;
+	border-right: 20vw solid transparent;
+	bottom: 0em;
+	width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+section:nth-of-type(2) > div:nth-child(5){
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+	border-bottom: 10em solid #919191;
+	border-left: 10vw solid transparent;
+	border-right: 10vw solid transparent;
+	bottom: 15em;
+	width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
