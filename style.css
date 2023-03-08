@@ -1,135 +1,301 @@
+/* css reset, zodat niks stiekem een margin krijgt */
 html,
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
-
 }
 
-/* de space, kan nog wat meer colors gebruiken */
-
 body {
-    
-  background-color: black;
+    background-color: black;
+}
 
-  }
-  
-  [data-s1-x="1"] + body { --s1-x:1; }
-  [data-s1-x="2"] + body { --s1-x:2; }
-  [data-s1-x="3"] + body { --s1-x:3; }
-  [data-s1-x="4"] + body { --s1-x:4; }
-  [data-s1-x="5"] + body { --s1-x:5; }
-  [data-s1-x="6"] + body { --s1-x:6; }
-  [data-s1-x="7"] + body { --s1-x:7; }
-  [data-s1-x="8"] + body { --s1-x:8; }
-  [data-s1-x="9"] + body { --s1-x:9; }
-  [data-s1-x="10"] + body { --s1-x:10; }
-  
-  [data-s1-x="10"] + body .main2 {
-      height: 0.2px;
-      width: 5px;
-      border-radius: 10em;
-     
-  background-color: rgba(102, 51, 153, 0);
-  }
-  [data-s1-x="10"] + body .main {
-      height: 0.2px;
-      width: 5px;
-      border-radius: 10em;
-     
-  background-color: rgba(102, 51, 153, 0);
-  }
-  
-  
-  input[type="range"] {
-  /* appearance: none; */
-  position: fixed;
-  left: 5em;
-  bottom: 25em;
-      rotate: 90deg;
-      width: 30%;
-      height:2em;
-      background: #d3d3d3;
-      outline: none;
-      opacity: 1;
-      -webkit-transition: .2s;
-      transition: opacity .2s;
-  
-  }
-  
-  input[type="range"]::-webkit-slider-thumb {
-    /* appearance: none; */
-    border-radius: 1em;
+/* css om de waardes van de slider te bepalen */
+[data-s1-x="1"]+body {
+    --s1-x: 1;
+}
 
-    width: 10em;
-    height: 5em;
-    background: #931616;
-    cursor: pointer;
-  }
+[data-s1-x="2"]+body {
+    --s1-x: 2;
+}
 
-  
-section:nth-of-type(1)>div:nth-of-type(1){
-    z-index: -1;
+[data-s1-x="3"]+body {
+    --s1-x: 3;
+}
+
+[data-s1-x="4"]+body {
+    --s1-x: 4;
+}
+
+[data-s1-x="5"]+body {
+    --s1-x: 5;
+}
+
+[data-s1-x="6"]+body {
+    --s1-x: 6;
+}
+
+[data-s1-x="7"]+body {
+    --s1-x: 7;
+}
+
+[data-s1-x="8"]+body {
+    --s1-x: 8;
+}
+
+[data-s1-x="9"]+body {
+    --s1-x: 9;
+}
+
+[data-s1-x="10"]+body {
+    --s1-x: 10;
+}
+
+/* creeert hyperspace effect als je max speed gaat */
+[data-s1-x="10"]+body section:nth-of-type(1)>div:nth-of-type(2) {
+    height: 0.2px;
+    width: 3px;
+    border-radius: 10em;
+
+    background-color: rgba(102, 51, 153, 0);
+}
+[data-s1-x="10"]+body section:nth-of-type(1)>div:nth-of-type(3) {
+    height: 0.2px;
+    width: 3px;
+    border-radius: 10em;
+
+    background-color: rgba(102, 51, 153, 0);
+}
+[data-s1-x="10"]+body section:nth-of-type(1)>div:nth-of-type(4) {
+    height: 0.2px;
+    width: 3px;
+    border-radius: 10em;
+
+    background-color: rgba(102, 51, 153, 0);
+}
+[data-s1-x="10"]+body section:nth-of-type(1)>div:nth-of-type(5) {
+    height: 0.2px;
+    width: 5px;
+    border-radius: 10em;
+
+    background-color: rgba(102, 51, 153, 0);
+}
+/* de bg die via een animation een illusie geeft van changing colors */
+section:nth-of-type(1)>div:nth-of-type(1) {
+    z-index: -2;
     position: fixed;
     width: 100%;
     height: 100%;
     animation: spacecolors 10s linear infinite;
-    background-image: linear-gradient(0deg,#000000,#420a25,#120029,#000000,#420a25);
+    background-image: linear-gradient(0deg, #000000, #420a25, #120029, #000000, #420a25);
     background-size: 100% 400%;
-  }
-  @keyframes spacecolors {
-    0% { background-position: 0% 100%; }
-    100% { background-position: 0% 0%; }
-  }
-  
-/* ff dit difje wegwerken nog, zijn de sterren */
-.main {
+}
+/* sterretjes */
+section:nth-of-type(1)>div:nth-of-type(2) {
+    z-index: -2;
     position: fixed;
     top: 50%;
     left: 50%;
     height: 1px;
     width: 1px;
-    background-color: #000000;
+    background-color: #fc000000;
     border-radius: 50%;
-    box-shadow: 10vw -5vh 2px 2px #fff,4vw 5vh 2px 2px #fff,4vw -44vh 2px 2px #fff,-24vw -4vh 2px 2px #fff,-24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -22vw -25vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 6vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw -16vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, -52vw 1vh 1px 0px #fff, 42vw 1vh 1px 0px #fff;
-
+    box-shadow: 10vw -5vh 2px 2px #fff, 4vw 5vh 2px 2px #fff, 4vw -44vh 2px 2px #fff, -24vw -4vh 2px 2px #fff, -24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -22vw -25vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 6vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw -16vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, -52vw 1vh 1px 0px #fff, 42vw 1vh 1px 0px #fff;
     animation-timing-function: linear;
     transition-timing-function: linear;
 }
+
 /* nog meer sterren */
-.main2 {
+section:nth-of-type(1)>div:nth-of-type(3) {
+    z-index: -2;
     position: fixed;
     top: 50%;
     left: 50%;
     height: 1px;
     width: 1px;
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsla(0, 100%, 48%, 0);
     border-radius: 50%;
-    box-shadow: 10vw -5vh 2px 2px #fff,4vw 5vh 2px 2px #fff,4vw -44vh 2px 2px #fff,-24vw -4vh 2px 2px #fff,-24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -22vw -25vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 6vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw -16vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, -52vw 1vh 1px 0px #fff, 42vw 1vh 1px 0px #fff;
+    box-shadow: 10vw -5vh 2px 2px #fff, 4vw 5vh 2px 2px #fff, 4vw -44vh 2px 2px #fff, -24vw -4vh 2px 2px #fff, -24vw -44vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -48vh 1px 2px #fff, -39vw 38vh 3px 1px #fff, -42vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 42vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw -38vh 1px 0px #fff, -17vw 45vh 3px 1px #fff, 22vw -36vh 3px 2px #fff, -22vw -25vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 6vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw -16vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, -52vw 1vh 1px 0px #fff, 42vw 1vh 1px 0px #fff;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+section:nth-of-type(1)>div:nth-of-type(4) {
+    z-index: -2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: hsla(0, 100%, 48%, 0);
+    border-radius: 50%;
+    box-shadow: 10vw -15vh 2px 2px #fff, 24vw 35vh 2px 2px #fff, 4vw 44vh 2px 2px #fff, 14vw -4vh 2px 2px #fff, -24vw -4vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -8vh 1px 2px #fff, -49vw 38vh 3px 1px #fff, -2vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 22vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw 8vh 1px 0px #fff, -67vw -35vh 3px 1px #fff, 22vw 26vh 3px 2px #fff, 02vw -15vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 16vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw 26vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, 12vw 1vh 1px 0px #fff, 1vw 1vh 1px 0px #fff;
 
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     transition-timing-function: linear;
 
 }
-body  .main {
+
+section:nth-of-type(1)>div:nth-of-type(5) {
+    position: fixed;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: hsla(0, 100%, 48%, 0);
+    border-radius: 50%;
+    box-shadow: 10vw -15vh 2px 2px #fff, 24vw 35vh 2px 2px #fff, 4vw 44vh 2px 2px #fff, 14vw -4vh 2px 2px #fff, -24vw -4vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -8vh 1px 2px #fff, -49vw 38vh 3px 1px #fff, -2vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 22vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw 8vh 1px 0px #fff, -67vw -35vh 3px 1px #fff, 22vw 26vh 3px 2px #fff, 02vw -15vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 16vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw 26vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, 12vw 1vh 1px 0px #fff, 1vw 1vh 1px 0px #fff;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transition-timing-function: linear;
+
+}
+
+section:nth-of-type(1)>:nth-of-type(6) {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    transition: all 4s;
+    height: 100%;
+    background-color: rgb(22, 22, 64);
+
+}
+
+section:nth-of-type(1):has(> input:checked) div:nth-of-type(6) {
+    animation: takeoff 4s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+section:nth-of-type(1)>:nth-of-type(7) {
+    z-index: -1;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    transition: all 2s;
+    opacity: 0.2;
+    border-radius: 50%;
+    box-shadow: 10vw -15vh 2px 2px #fff, 24vw 35vh 2px 2px #fff, 4vw 44vh 2px 2px #fff, 14vw -4vh 2px 2px #fff, -24vw -4vh 2px 2px #fff, 38vw -4vh 0px 0px #fff, -20vw -8vh 1px 2px #fff, -49vw 38vh 3px 1px #fff, -2vw -11vh 0px 3px #fff, 12vw 15vh 3px 3px #fff, 22vw 6vh 3px 2px #fff, -8vw 9vh 0px 2px #fff, 34vw 8vh 1px 0px #fff, -67vw -35vh 3px 1px #fff, 22vw 26vh 3px 2px #fff, 02vw -15vh 3px 2px #fff, 2vw 36vh 3px 2px #fff, -22vw 26vh 3px 2px #fff, 2vw 16vh 3px 2px #fff, 22vw 36vh 3px 2px #fff, 12vw 26vh 3px 2px #fff, 32vw -26vh 3px 2px #fff, 12vw -40vh 0px 2px #fff, -42vw 1vh 1px 0px #fff, 12vw 1vh 1px 0px #fff, 1vw 1vh 1px 0px #fff;
+}
+
+section:nth-of-type(1):has(> input:checked) div:nth-of-type(7) {
+    opacity: 0;
+}
+
+p {
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 11px #515151);
+    font-size: 2.5em;
+    right: 1em;
+    top: 1.5em;
+}
+
+section:nth-of-type(1)>div:nth-of-type(8) {
+    position: fixed;
+
+    left: -500%;
+    margin-top: 30%;
+    z-index: -1;
+    width: 1200em;
+    border-radius: 100%;
+    height: 450em;
+    transition: all 4s;
+    background: rgb(79, 40, 21);
+    background: linear-gradient(0deg, rgba(113, 70, 48, 1) 96%, rgb(193, 126, 74) 100%);
+
+}
+
+section:nth-of-type(1):has(> input:checked) div:nth-of-type(8) {
+    margin-top: 50%;
+}
+
+section:nth-of-type(1)>input {
+    z-index: 10;
+    position: fixed;
+    width: 10em;
+    height: 10em;
+    bottom: 4em;
+    right: 36em;
+    opacity: 0;
+
+
+}
+
+section:nth-of-type(1)>div:nth-of-type(9) {
+    position: fixed;
+    background-color: rgb(151, 145, 145);
+    border: 7px solid rgb(131, 130, 130);
+    box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.06);
+    top: 78vh;
+    z-index: 9;
+    right: 15em;
+    border-radius: 1em;
+
+    width: 24em;
+    height: 12em;
+}
+
+section:nth-of-type(1)>div:nth-of-type(10) {
+    position: absolute;
+    border: 5px solid rgb(27, 99, 21);
+    background-color: rgba(33, 137, 45, 0.815);
+    box-shadow: inset -4px -1px 26px -4px rgba(13, 93, 13, 0.927), 0px 10px 19px 0px rgba(0, 0, 0, 0.134);
+    top: 81vh;
+    border-radius: 1em;
+    right: 32em;
+    width: 5em;
+    height: 8em;
+    transition: all 0.2s;
+    z-index: 9;
+}
+
+section:nth-of-type(1):has(> input:checked)>div:nth-of-type(10) {
+    transform: scale(0.9);
+    background-color: rgba(22, 246, 48, 0.815);
+
+}
+
+
+body section:nth-of-type(1)>div:nth-of-type(2) {
     animation: zoom;
     animation-duration: calc(10s / var(--s1-x, 0));
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
-body  .main2 {
+
+body section:nth-of-type(1)>div:nth-of-type(3) {
     animation: poom;
     animation-duration: calc(10s / var(--s1-x, 0));
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
+
+body section:nth-of-type(1)>div:nth-of-type(4) {
+    animation: doom;
+    animation-duration: calc(10s / var(--s1-x, 0));
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+body section:nth-of-type(1)>div:nth-of-type(5) {
+    animation: toom;
+    animation-duration: calc(10s / var(--s1-x, 0));
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 /*  zonnetje */
 section:nth-of-type(2)>div:nth-of-type(6) {
     position: fixed;
 
-    z-index: -1;
+    z-index: -2;
     top: 30%;
     left: 50%;
     height: 150px;
@@ -148,6 +314,308 @@ section:nth-of-type(2)>div:nth-of-type(6) {
 section:first-of-type:has(> input:checked)+section:nth-of-type(2)>div:nth-of-type(6) {
     animation: sun 5s linear infinite;
 } */
+
+
+section:nth-of-type(2)>div:nth-of-type(7) {
+    position: fixed;
+
+    z-index: -2;
+    top: 30%;
+    left: 50%;
+
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-radius: 50%;
+    background: rgb(72, 102, 82);
+    overflow: hidden;
+    filter: drop-shadow(0 0 1rem rgba(136, 255, 241, 0.374));
+    animation: planet;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: calc(40s / var(--s1-x, 0));
+    transform: scale(5);
+}
+
+section:nth-of-type(2)>div:nth-of-type(7)::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(202, 202, 202, 0.5);
+    mix-blend-mode: multiply;
+    position: absolute;
+    border-radius: 50%
+}
+
+section:nth-of-type(2)>div:nth-of-type(7)::after {
+    content: '';
+    width: 80%;
+    height: 80%;
+    top: 0%;
+    right: 0%;
+    background: rgba(184, 255, 253, 0.396);
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(.5em);
+
+    mix-blend-mode: luminosity;
+}
+
+
+/* cockpit onderdelen */
+section:nth-of-type(2)>div:nth-child(1) {
+    position: fixed;
+    right: 10vw;
+    width: 2vw;
+    min-width: 1vw;
+    height: 100vw;
+    background: #414141;
+    transform: skew(30deg);
+    box-shadow: inset -10px 15px 15px #00000057, inset 10px 5px 15px #94d2ff57;
+
+}
+
+section:nth-of-type(2)>div:nth-child(2) {
+    position: fixed;
+
+    left: 10vw;
+    width: 2vw;
+    min-width: 1vw;
+    height: 100vw;
+    background: #414141;
+    transform: skew(-30deg);
+    box-shadow: inset 10px 15px 15px #00000057, inset -10px 5px 15px #94d2ff57;
+
+}
+
+/* section:nth-of-type(2)>div:nth-child(2) {
+ background-color: red;
+    box-shadow: inset 10px 15px 15px #ff0000;
+} werkt nog niet */
+section:nth-of-type(2)>div:nth-child(3) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 50vw;
+    height: 8vw;
+    box-shadow: inset 50px 10px 30px #29292957, inset -50px 50px 20px #98afb22a;
+
+    transform: perspective(40px) rotateX(-25deg);
+    background: #414141;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section:nth-of-type(2)>div:nth-child(4) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 12vw;
+    min-height: 25em;
+    box-shadow: inset 0px 11px 9px -4px rgba(0, 0, 0, 0.5);
+    transform: perspective(40px) rotateX(25deg);
+    background: #414141;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section:nth-of-type(2)>div:nth-child(5) {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 10vw;
+    min-height: 20em;
+    box-shadow: inset 0px 150px 201px 0px rgba(0, 0, 0, 0.464);
+
+    transform: perspective(40px) rotateX(25deg);
+    background: #878787;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* input om de lasers af te vuren */
+section:nth-of-type(3)>input {
+    position: fixed;
+    top: 81vh;
+    opacity: 0;
+    z-index: 10;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 10em;
+    height: 10em;
+
+}
+
+/* lasertje die pas verschijnt wanneer je de input checked */
+
+section:nth-of-type(3)>div:nth-of-type(1) {
+    position: fixed;
+    z-index: -1;
+    opacity: 0;
+    position: fixed;
+    width: 2.5em;
+    height: 40em;
+    bottom: 30%;
+    left: 0em;
+    max-height: 18vw;
+    z-index: -1;
+    border-radius: 1.5em;
+    transform: rotate(80deg);
+    background-color: #ffcccc;
+    box-shadow: 0px 0px 45px 25px #ff4f4f;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section:nth-of-type(3):has(> input:checked)>div:nth-of-type(1) {
+    animation: laser 0.4s infinite;
+}
+
+
+
+/* kannon */
+section:nth-of-type(3)>div:nth-child(3) {
+    display: none;
+}
+
+section:nth-of-type(3):has(> input:checked)>div:nth-child(4) {
+    animation: barrel 0.4s infinite;
+}
+
+section:nth-of-type(3):has(> input:checked)>div:nth-child(3) {
+    animation: barrel 0.4s infinite;
+}
+
+
+section:nth-of-type(3)>div:nth-child(4) {
+    position: fixed;
+    width: 3em;
+    height: 40em;
+    bottom: 30%;
+    left: 0em;
+    max-height: 20vw;
+    z-index: -1;
+    border-radius: 1.5em;
+    transform: rotate(80deg);
+    background-color: #a9a9a9;
+    box-shadow: inset 0px 18px 19px 12px rgba(0, 0, 0, 0.265);
+}
+
+section:nth-of-type(3)>div:nth-child(4)>div {
+    position: relative;
+    width: 5em;
+    height: 10em;
+
+    left: -1em;
+
+    z-index: 1;
+    border-radius: 1.5em;
+    box-shadow: inset 0px 30px 9px 5px rgba(0, 0, 0, 0.265);
+    background-color: #4b4b4b;
+
+}
+
+section:nth-of-type(3)>div:nth-child(6) {
+    position: fixed;
+    background-color: rgb(151, 145, 145);
+    border: 7px solid rgb(131, 130, 130);
+    box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.06);
+    top: 78vh;
+    border-radius: 1em;
+    margin-left: 49%;
+    margin-right: 50%;
+    width: 20em;
+    height: 12em;
+}
+
+section:nth-of-type(3)>div:nth-child(7) {
+    position: fixed;
+    border: 12px solid rgb(125, 11, 11);
+    background-color: rgba(156, 10, 10, 0.815);
+    box-shadow: inset -4px -1px 26px -4px rgba(107, 6, 6, 0.927), 0px 10px 19px 0px rgba(0, 0, 0, 0.303);
+    top: 81vh;
+    border-radius: 10em;
+    margin-left: 50%;
+    margin-right: 50%;
+    width: 8em;
+    height: 8em;
+    transition: all 0.2s;
+}
+
+section:nth-of-type(3):has(> input:checked)>div:nth-child(7) {
+    transform: scale(0.9);
+    background-color: rgba(255, 0, 0, 0.815);
+    box-shadow: inset -4px -1px 26px -4px rgba(107, 6, 6, 0.927), 0px 10px 19px 0px rgba(0, 0, 0, 0.265);
+
+}
+
+section:nth-of-type(4)>div:nth-of-type(1) {
+    position: fixed;
+    background-color: rgb(151, 145, 145);
+    border: 7px solid rgb(131, 130, 130);
+    box-shadow: 0px 10px 19px 0px rgba(0, 0, 0, 0.06);
+    top: 78vh;
+    left: 15em;
+    border-radius: 1em;
+
+    width: 40em;
+    height: 12em;
+}
+
+
+section:nth-of-type(4)>input[type="range"] {
+    -webkit-appearance: none;
+    /* appearance: none; */
+    position: fixed;
+    transform: rotate(-90deg);
+    top: 87vh;
+    left: 22em;
+    background-color: rgb(117, 117, 117);
+    box-shadow: inset 1px -2px 5px #00000071, 1px 10px 5px #00000013;
+    width: 40em;
+    z-index: 10;
+    rotate: 90deg;
+    height: 1em;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 0.3em solid #3e3e3e;
+    height: 6em;
+    width: 2em;
+    border-radius: 0.6em;
+    background: #585858;
+    cursor: pointer;
+    margin-top: -14px;
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    /* Add cool effects to your sliders! */
+}
+
+
+
+
+
+@keyframes spacecolors {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
 /* zon glow */
 @keyframes sun {
     0% {
@@ -170,60 +638,16 @@ section:first-of-type:has(> input:checked)+section:nth-of-type(2)>div:nth-of-typ
         opacity: 0;
     }
 }
-section:nth-of-type(2)>div:nth-of-type(7) {
-    position: fixed;
 
-    z-index: -1;
-    top: 30%;
-    left: 50%;
- 
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border-radius: 50%;
-  background: rgb(72, 102, 82);
-  overflow: hidden;
-  filter: drop-shadow(0 0 1rem rgba(136, 255, 241, 0.374));
-  animation: planet;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  animation-duration: calc(40s / var(--s1-x, 0));
-    transform: scale(5);
-}
-section:nth-of-type(2)>div:nth-of-type(7)::before{
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(202, 202, 202, 0.5);
-    mix-blend-mode: multiply;
-    position: absolute;
-    border-radius: 50%  }
-
-section:nth-of-type(2)>div:nth-of-type(7)::after {
-    content: '';
-    width: 80%;
-    height: 80%;
-    top: 0%;
-   right: 0%;
-    background: rgba(184, 255, 253, 0.396);
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(.5em);
-    
-    mix-blend-mode: luminosity;
-  }
-  section:first-of-type:has(> input:checked)+section:nth-of-type(2)>div:nth-of-type(7) {
-    animation: planet 4s linear infinite;
-}
 @keyframes planet {
     0% {
         opacity: 0;
-     
-        box-shadow: 0 0 10px #93fffaaa, 0 0 20px, 
+
+        box-shadow: 0 0 10px #93fffaaa, 0 0 20px,
     }
 
     80% {
-     
+
         opacity: 0;
     }
 
@@ -234,64 +658,12 @@ section:nth-of-type(2)>div:nth-of-type(7)::after {
 
     100% {
         transform: translate(-90em, 40em) scale(8);
-       
+
         opacity: 1;
     }
 }
-/* input om de speed te starten */
-section:first-of-type>input {
-    position: fixed;
-    z-index: 10;
-    left: 50%;
-    transform: scale(1) translateX(-50%);
-    bottom: 10em;
-    text-align: center;
 
-    width: 10em;
-    height: 10em;
-    animation: decreaseflash 0.5s;
 
-}
-
-section:first-of-type>input:checked {
-    animation: increaseflash 0.5s;
-}
-/* speed increasen van de sterren
-section:first-of-type>input:checked+.main {
-    transition: all 1s;
-    animation: zoom 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transition-timing-function: linear;
-}
-
-section:first-of-type>input:checked+.main+.main2 {
-    transition: all 1s;
-    animation: poom 1s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    transition-timing-function: linear;
-} */
-/* kleine flash om je speed transition wat vetter te maken */
-@keyframes decreaseflash {
-    0% {
-        box-shadow: 5em 10em 1em 100vw #7cfffb2d;
-    }
-
-    100% {
-        box-shadow: 5em 10em 1em 100vw #ffffff00;
-    }
-}
-
-@keyframes increaseflash {
-    0% {
-        box-shadow: 5em 10em 1em 100vw hsla(185, 100%, 74%, 0.176);
-    }
-
-    100% {
-        box-shadow: 5em 10em 1em 100vw #ffffff00;
-    }
-}
 /* ster beweeg animatie */
 @keyframes zoom {
     0% {
@@ -320,118 +692,102 @@ section:first-of-type>input:checked+.main+.main2 {
         transform: scale(1);
     }
 }
-/* cockpit onderdelen */
-section:nth-of-type(2)>div:nth-child(1) {
-    position: fixed;
-    right: 10vw;
-  width: 2vw;
-  min-width: 1vw;
-  height: 100vw;
-    background: #414141;
-    transform: skew(30deg);
-    box-shadow: inset -10px 15px 15px #00000057, inset 10px 5px 15px #94d2ff57;
 
+@keyframes doom {
+    0% {
+        opacity: 1;
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+
+    51% {
+        opacity: 0;
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
 }
 
-section:nth-of-type(2)>div:nth-child(2) {
-    position: fixed;
-  
-    left: 10vw;
-  width: 2vw;
-  min-width: 1vw;
-  height: 100vw;
-    background: #414141;
-    transform: skew(-30deg);
-    box-shadow: inset 10px 15px 15px #00000057, inset -10px 5px 15px #94d2ff57;
+@keyframes toom {
+    0% {
+        opacity: 1;
+        transform: scale(10);
+    }
 
-}
- /* section:nth-of-type(2)>div:nth-child(2) {
- background-color: red;
-    box-shadow: inset 10px 15px 15px #ff0000;
-} werkt nog niet */ 
-section:nth-of-type(2)>div:nth-child(3) {
-    position: fixed;
- left: 0;
- right: 0;
-    top: 0;
-  width: 50vw;
-  height: 8vw;
-  box-shadow: inset 50px 10px 30px #29292957, inset  -50px 50px 20px #98afb22a;
+    10% {
+        opacity: 0;
+        transform: scale(14);
+    }
 
-  transform: perspective(40px) rotateX(-25deg);
-    background: #414141;
-    margin-left:  auto;
-    margin-right: auto;
+    49% {
+        transform: scale(2);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(2);
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(10);
+    }
 }
 
-section:nth-of-type(2)>div:nth-child(4) {
-    position: fixed;
- left: 0;
- right: 0;
-bottom: 0;
-  width: 100vw;
-  height: 12vw;
-  min-height: 25em;
-  box-shadow: inset 0px 11px 9px -4px rgba(0,0,0,0.5);
-  transform: perspective(40px) rotateX(25deg);
-    background: #414141;
-    margin-left:  auto;
-    margin-right: auto;
+@keyframes takeoff {
+    0% {
+
+        background-color: rgb(22, 22, 64);
+    }
+
+    50% {
+        background-color: rgb(111, 214, 233);
+
+    }
+
+    100% {
+
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
-section:nth-of-type(2)>div:nth-child(5) {
-    position: fixed;
- left: 0;
- right: 0;
-bottom: 0;
-  width: 100vw;
-  height: 10vw;
-  min-height: 20em;
-  box-shadow: inset 0px 150px 201px 0px rgba(0, 0, 0, 0.464);
 
-  transform: perspective(40px) rotateX(25deg);
-    background: #878787;
-    margin-left:  auto;
-    margin-right: auto;
-}
-/* input om de lasers af te vuren */
-section:nth-of-type(3)>input {
-    position: fixed;
 
-    transform: translate(-50%, 0);
-    border-bottom: 10em solid hsl(0, 0%, 57%);
-    border-left: 10vw solid transparent;
-    border-right: 10vw solid transparent;
-    bottom: 10em;
-    right: 50em;
-    width: 10em;
-    height: 10em;
-}
-/* lasertje die pas verschijnt wanneer je de input checked */
 
-section:nth-of-type(3)>div:nth-of-type(1) {
-    position: fixed;
-    z-index: -1;
-opacity: 0;
-    position: fixed;
-    width: 2.5em;
-    height: 40em;
-  bottom: 30%;
-  left: 0em;
-  max-height: 18vw;
-    z-index: -1;
-    border-radius: 1.5em;
-    transform: rotate(80deg);
-    background-color: #ffcccc;
-    box-shadow: 0px 0px 45px 25px #ff4f4f;
- 
-    margin-left: auto;
-    margin-right: auto;
+@keyframes takeoffplanet {
+    0% {}
+
+    100% {}
 }
 
-section:nth-of-type(3):has(> input:checked)>div:nth-of-type(1) {
-    animation: laser 0.4s infinite;
+/* animatie die de barrel een beetje shaked */
+@keyframes barrel {
+    15% {
+
+        opacity: 1;
+
+        transform: rotate(80deg) scale(1.0);
+    }
+
+    25% {
+
+
+        transform: translate(-4em, .5em) rotate(80deg) scale(1.05);
+    }
+
+    100% {
+        transform: rotate(80deg) scale(1.0);
+    }
 }
+
 /* translate y gebruiken */
 @keyframes laser {
     0% {
@@ -462,116 +818,5 @@ section:nth-of-type(3):has(> input:checked)>div:nth-of-type(1) {
 
         transform: translate(50vw, -10vw) rotate(80deg) scale(0.0);
 
-    }
-}
-
-
-/* kannon */
-section:nth-of-type(3)>div:nth-child(3) {
-display: none;
-}
-section:nth-of-type(3):has(> input:checked)>div:nth-child(4) {
-    animation: barrel 0.4s infinite;
-}
-section:nth-of-type(3):has(> input:checked)>div:nth-child(3) {
-    animation: barrel 0.4s infinite;
-}
-/* animatie die de barrel een beetje shaked */
-@keyframes barrel {
-    15% {
-
-        opacity: 1;
-
-        transform: rotate(80deg) scale(1.0);
-    }
-
-    25% {
-
-
-        transform: translate(-4em, .5em) rotate(80deg) scale(1.05);
-    }
-
-    100% {
-        transform: rotate(80deg) scale(1.0);
-    }
-}
-
-section:nth-of-type(3)>div:nth-child(4) {
-    position: fixed;
-  width: 3em;
-  height: 40em;
-bottom: 30%;
-left: 0em;
-max-height: 20vw;
-  z-index: -1;
-  border-radius: 1.5em;
-  transform: rotate(80deg);
-    background-color: #a9a9a9;
-    box-shadow: inset 0px 18px 19px 12px rgba(0, 0, 0, 0.265);
-}
-section:nth-of-type(3)>div:nth-child(4)> div {
-    position: relative;
-  width: 5em;
-  height: 10em;
-
-left: -1em;
-
-  z-index: 1;
-  border-radius: 1.5em;
-box-shadow: inset 0px 30px 9px 5px rgba(0, 0, 0, 0.265);
-    background-color: #4b4b4b;
-  
-}
-
-section:nth-of-type(3)>div:nth-child(5) {
-   position: absolute;
-   width: 1em;
-   height: 1em;
-   margin-left: auto;
-   margin-right: auto;
-   top: 40%;
-   width: 1em;
-   height: 1em;
-   right: 50%;
-    background: rgba(0, 128, 0, 0);
-    border-radius: 20em;
-   
-
-  
-
-}
-section:nth-of-type(3):has(> input:checked)>div:nth-child(5) {
-    animation: boom 0.4s infinite;
-}
-@keyframes boom {
-    0% {
-        width: 0em;
-        height: 0em;
-        box-shadow: 0 1 20px rgba(127, 153, 127, 0);
-    }
-    60% {
-        box-shadow: 0 1 20px rgb(127, 151, 153);
-        border-radius: 50%;
-        width: 1em;
-        height: 1em;
-        background: rgba(239, 33, 167, 0.194);
-    }
-    70% {
-
-    
-    box-shadow: 
-    0px 0px 100px 20px rgb(235, 63, 112);
-    border-radius: 100%;
-    width: 2em;
-    height: 2em;
-    background: rgba(255, 42, 149, 0.612);
-    }
-    80% {
-        
-        box-shadow: 
-    0px 0px 10px 25px rgba(222, 95, 157, 0.462);
-    }
-    100% {
-        box-shadow: 0 10 10px rgb(153, 127, 143);
     }
 }
