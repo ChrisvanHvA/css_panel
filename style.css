@@ -9,6 +9,16 @@ html,
 body {
     background-color: black;
 }
+/* algemene text styling */
+p {
+    position: absolute;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    filter: drop-shadow(0px 0px 11px #515151);
+    font-size: 2.5em;
+    right: 1em;
+    top: 1.5em;
+}
 
 /* css om de waardes van de slider te bepalen */
 [data-s1-x="1"]+body {
@@ -154,7 +164,7 @@ section:nth-of-type(1)>div:nth-of-type(5) {
     transition-timing-function: linear;
 
 }
-
+/* bg als je geland bent */
 section:nth-of-type(1)>:nth-of-type(6) {
     position: fixed;
     z-index: -1;
@@ -164,12 +174,12 @@ section:nth-of-type(1)>:nth-of-type(6) {
     background-color: rgb(22, 22, 64);
 
 }
-
+/* als de input gechecked is dan zal deze animatie spelen */
 section:nth-of-type(1):has(> input:checked) div:nth-of-type(6) {
     animation: takeoff 4s;
     background-color: rgba(0, 0, 0, 0);
 }
-
+/* sterren voor als je geland bent */
 section:nth-of-type(1)>:nth-of-type(7) {
     z-index: -1;
     position: fixed;
@@ -187,16 +197,7 @@ section:nth-of-type(1):has(> input:checked) div:nth-of-type(7) {
     opacity: 0;
 }
 
-p {
-    position: absolute;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-weight: bold;
-    filter: drop-shadow(0px 0px 11px #515151);
-    font-size: 2.5em;
-    right: 1em;
-    top: 1.5em;
-}
-
+/* de planeet waar je op land */
 section:nth-of-type(1)>div:nth-of-type(8) {
     position: fixed;
 
@@ -211,11 +212,11 @@ section:nth-of-type(1)>div:nth-of-type(8) {
     background: linear-gradient(0deg, rgba(113, 70, 48, 1) 96%, rgb(193, 126, 74) 100%);
 
 }
-
+/* dit zorgt ervoor dat de planeet naar beneden gaat wanneer de input gechecked is */
 section:nth-of-type(1):has(> input:checked) div:nth-of-type(8) {
     margin-top: 50%;
 }
-
+/* de input voor opstijgen en landen, 0 opacity zodat ik er een knop eronder kon maken */
 section:nth-of-type(1)>input {
     z-index: 10;
     position: fixed;
@@ -224,10 +225,8 @@ section:nth-of-type(1)>input {
     bottom: 4em;
     right: 36em;
     opacity: 0;
-
-
 }
-
+/* panel waar de knop op zit */
 section:nth-of-type(1)>div:nth-of-type(9) {
     position: fixed;
     background-color: rgb(151, 145, 145);
@@ -241,7 +240,7 @@ section:nth-of-type(1)>div:nth-of-type(9) {
     width: 24em;
     height: 12em;
 }
-
+/* opstijg knop */
 section:nth-of-type(1)>div:nth-of-type(10) {
     position: absolute;
     border: 5px solid rgb(27, 99, 21);
@@ -255,14 +254,14 @@ section:nth-of-type(1)>div:nth-of-type(10) {
     transition: all 0.2s;
     z-index: 9;
 }
-
+/* opstijg knop animatie voor wanneer hij aan staat. */
 section:nth-of-type(1):has(> input:checked)>div:nth-of-type(10) {
     transform: scale(0.9);
     background-color: rgba(22, 246, 48, 0.815);
 
 }
 
-
+/* de animaties om de sterren te laten bewegen op basis van je slider speed */
 body section:nth-of-type(1)>div:nth-of-type(2) {
     animation: zoom;
     animation-duration: calc(10s / var(--s1-x, 0));
@@ -388,10 +387,7 @@ section:nth-of-type(2)>div:nth-child(2) {
 
 }
 
-/* section:nth-of-type(2)>div:nth-child(2) {
- background-color: red;
-    box-shadow: inset 10px 15px 15px #ff0000;
-} werkt nog niet */
+
 section:nth-of-type(2)>div:nth-child(3) {
     position: fixed;
     left: 0;
@@ -492,7 +488,7 @@ section:nth-of-type(3):has(> input:checked)>div:nth-child(3) {
     animation: barrel 0.4s infinite;
 }
 
-
+/* deel van de laserkannon */
 section:nth-of-type(3)>div:nth-child(4) {
     position: fixed;
     width: 3em;
@@ -506,7 +502,7 @@ section:nth-of-type(3)>div:nth-child(4) {
     background-color: #a9a9a9;
     box-shadow: inset 0px 18px 19px 12px rgba(0, 0, 0, 0.265);
 }
-
+/* loop van het kannon */
 section:nth-of-type(3)>div:nth-child(4)>div {
     position: relative;
     width: 5em;
@@ -520,7 +516,7 @@ section:nth-of-type(3)>div:nth-child(4)>div {
     background-color: #4b4b4b;
 
 }
-
+/* panel voor de fire knop */
 section:nth-of-type(3)>div:nth-child(6) {
     position: fixed;
     background-color: rgb(151, 145, 145);
@@ -533,7 +529,7 @@ section:nth-of-type(3)>div:nth-child(6) {
     width: 20em;
     height: 12em;
 }
-
+/* fire knop */
 section:nth-of-type(3)>div:nth-child(7) {
     position: fixed;
     border: 12px solid rgb(125, 11, 11);
@@ -554,7 +550,7 @@ section:nth-of-type(3):has(> input:checked)>div:nth-child(7) {
     box-shadow: inset -4px -1px 26px -4px rgba(107, 6, 6, 0.927), 0px 10px 19px 0px rgba(0, 0, 0, 0.265);
 
 }
-
+/* panel waar de slider op zit */
 section:nth-of-type(4)>div:nth-of-type(1) {
     position: fixed;
     background-color: rgb(151, 145, 145);
@@ -567,7 +563,7 @@ section:nth-of-type(4)>div:nth-of-type(1) {
     width: 40em;
     height: 12em;
 }
-
+/* slider */
 
 section:nth-of-type(4)>input[type="range"] {
     -webkit-appearance: none;
@@ -602,7 +598,8 @@ input[type=range]::-webkit-slider-thumb {
     /* Add cool effects to your sliders! */
 }
 
-
+/* _____________________________________________________________________________________
+          VVVVVVVVVV Alle animaties die ik heb gemaakt voor dit project VVVVVVVVVV    */
 
 
 
