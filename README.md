@@ -58,7 +58,7 @@ wat van belang was:
 -Duidelijke status van alle bedieningselementen
 
 Mijn schetsen voor het project:
-!(https://github.com/ChrisvanHvA/css_panel/blob/main/images/css%20drawings.jpg)
+![sketch for css](https://github.com/ChrisvanHvA/css_panel/blob/main/images/css%20drawings.jpg?raw=true)
 Op mijn schetsen kreeg ik al snel te horen van de docenten dat ik het te ingewikkeld aan het schetsen was, ik moet eerst
 beginnen met kernfuncties toe te voegen en daarna pas meer knoppen toevoegen waar tijd voor is.
 
