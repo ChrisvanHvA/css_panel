@@ -67,6 +67,8 @@ ben ik gegaan voor een hoekigere design.
 
 ### eerste uitwerking
 
+![version 1 css](https://user-images.githubusercontent.com/90341211/224000853-8869f27d-3f49-4b7b-b0e3-f15d8680b0a7.png)
+
 in de eerste versie had ik een cockpit gemaakt sterren die via een animatie scalen, en daardoor de illusie geven dat ze 
 dichterbij komen, ook had ik een knop gemaakt om de speed te increasen door een has: selector te gebruiken.
 
@@ -76,11 +78,16 @@ dichterbij komen, ook had ik een knop gemaakt om de speed te increasen door een 
 
 ### Tweede uitwerking
 
+![version 2 css](https://github.com/ChrisvanHvA/css_panel/blob/main/images/css_v2.png?raw=true)
+
 In de tweede week had ik al vrij veel feedback gekregen, ik had ook een laser toegevoegd die kan schieten op basis
 van een input, ik kreeg wel als feedback dat ik deze wat mooier kon maken en dat de terugslag een beetje onrealistisch
 is, tot slot heb ik een gradient background aan space toegevoegd om het interessanter te maken om naar te kijken.
 
 ### Derde uitwerking
+
+![version 3 css](https://user-images.githubusercontent.com/90341211/224001133-cd00356f-9901-41f5-8191-57adcbb16e89.png)
+
 
 ik had gehoord dat je wel gebruik van 1 slider met JS mocht gebruiken, alleen had ik dit verkeerd begrepen dus had ik 
 eerst mijn eigen js slider geprogrameerd voordat ik hem vervangde met de JS slider die voorgeleverd was.
@@ -94,6 +101,9 @@ nog een planeet toegevoegd.
 
 
 ### Laatste iteratie
+
+![version 4 css](https://user-images.githubusercontent.com/90341211/224001215-eae552f4-2737-4f88-a14e-015559fa29ab.png)
+
 
 De laatste versie had een gestylede control panel met knopjes die feedback geven wanneer ze gedrukt zijn, ook ben ik de
 slider gaan stylen, momenteel zijn er wel alleen maar 2 browsers die dit supporten (Chrome en Firefox), hiernaast heb ik
