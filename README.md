@@ -1,7 +1,7 @@
 # CSS To The Rescue
 
 ## Documentatie - Chris Gabriel III
-## CMD J3 500849088
+### CMD J3 500849088
 
 
 
@@ -51,7 +51,7 @@ Het doel is om je meer onderzoek te laten doen naar de mogelijkheden van CSS, ip
 Alhoewel ik in het begin wel interesse had in het maken van een rubiks cube, wist ik dat dit boven mijn niveau zou liggen.
 ik kreeg vervolgens al meteen een goed idee waarin ik de bedieningspaneel kon toepassen.
 
-###3 Mijn plan was om de cockpit van een ruimteschip te bouwen, met meerdere buttons en sliders om te drukken.
+### Mijn plan was om de cockpit van een ruimteschip te bouwen, met meerdere buttons en sliders om te drukken.
 wat van belang was:
 -Affordance (gebruikers kunnen zien hoe iets te bedienen is)
 -Feedback aan de gebruiker
@@ -93,7 +93,7 @@ ik had gehoord dat je wel gebruik van 1 slider met JS mocht gebruiken, alleen ha
 eerst mijn eigen js slider geprogrameerd voordat ik hem vervangde met de JS slider die voorgeleverd was.
 De slider zorgt ervoor dat je de snelheid kan increasen relatief van waar de slider staat.
 Ook had ik de cockpit geupdate zodat hij er mooier er uit zag en betere scaling had, ik had ook geoefend met het toevoegen
-van een explosion bij het einde van de laser mar ik kreeg dit niet mooi genoeg om het er in te laten, tot slot had ik
+van een explosion bij het einde van de laser maar ik kreeg dit niet mooi genoeg om het er in te laten, tot slot had ik
 nog een planeet toegevoegd.
 
 
