@@ -73,6 +73,9 @@ ben ik gegaan voor een hoekigere design.
 in de eerste versie had ik een cockpit gemaakt sterren die via een animatie scalen, en daardoor de illusie geven dat ze 
 dichterbij komen, ook had ik een knop gemaakt om de speed te increasen door een has: selector te gebruiken.
 
+Omdat dit mijn eerste poging was tot een cockpit was het resultaat nog niet wat ik precies wou, ook vooral wanneer ik
+de pagina scalede zag ik hoe triest mijn werk was, ik kan de volgende keer beter wat meer onderzoek doen voordat ik
+willekeurig iets ga proberen.
 
 
 # Week 3 Itereren en updaten.
@@ -97,6 +100,10 @@ Ook had ik de cockpit geupdate zodat hij er mooier er uit zag en betere scaling 
 van een explosion bij het einde van de laser maar ik kreeg dit niet mooi genoeg om het er in te laten, tot slot had ik
 nog een planeet toegevoegd.
 
+Deze week begon mijn project meer te lijken op wat ik wou hebben, ook merkte ik dat het toevoegen van technieken die ik
+nog niet eerder heb gebruikt mooie resultaten konden leveren, ook was het een belangrijk leermoment dat niet alles 
+precies zal werken zoals je zou willen, en dat je soms ideeen toch moet gaan scrappen ipv. er teveel tijd aan te 
+besteden.
 
 # Week 4 Afronding en beoordelignsgesprek
 
@@ -113,6 +120,9 @@ een functie toegevoegd om het voertuig te landen en ook weer op te stijgen uit d
 Ik heb deze week ook erg gewerkt aan het verschonen van mijn code en het verwijderen van classes die ik er nog van het
 begin in had zitten.
 
+
+Deze laatste week heeft me nog de tijd gegeven om mijn project toch af te krijgen op de manier dat ik had gewilt had
+en om nog een interessante feature te kunnen toe te voegen waardoor het hele project een stuk completer aanvoelt.
 # Reflectie
 
 Ik heb het gevoel dat ik tijdens dit project een stuk sneller ben geworden met het maken van CSS, het maken van animaties
