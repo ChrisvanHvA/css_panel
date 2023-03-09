@@ -3,6 +3,7 @@
 ## Documentatie - Chris Gabriel III
 ### CMD J3 500849088
 
+![banner](https://user-images.githubusercontent.com/90341211/224004124-4047435b-5de7-48c8-8293-0ce572bd1557.png)
 
 
 
