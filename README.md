@@ -1,7 +1,7 @@
 # CSS To The Rescue
 
 ## Documentatie - Chris Gabriel III
-## CMD J3 500849088
+### CMD J3 500849088
 
 
 
@@ -51,14 +51,14 @@ Het doel is om je meer onderzoek te laten doen naar de mogelijkheden van CSS, ip
 Alhoewel ik in het begin wel interesse had in het maken van een rubiks cube, wist ik dat dit boven mijn niveau zou liggen.
 ik kreeg vervolgens al meteen een goed idee waarin ik de bedieningspaneel kon toepassen.
 
-###3 Mijn plan was om de cockpit van een ruimteschip te bouwen, met meerdere buttons en sliders om te drukken.
+### Mijn plan was om de cockpit van een ruimteschip te bouwen, met meerdere buttons en sliders om te drukken.
 wat van belang was:
 -Affordance (gebruikers kunnen zien hoe iets te bedienen is)
 -Feedback aan de gebruiker
 -Duidelijke status van alle bedieningselementen
 
 Mijn schetsen voor het project:
-
+![sketch for css](https://github.com/ChrisvanHvA/css_panel/blob/main/images/css%20drawings.jpg?raw=true)
 Op mijn schetsen kreeg ik al snel te horen van de docenten dat ik het te ingewikkeld aan het schetsen was, ik moet eerst
 beginnen met kernfuncties toe te voegen en daarna pas meer knoppen toevoegen waar tijd voor is.
 
@@ -66,6 +66,8 @@ Ook kreeg ik van mijn klasgenoten te horen dat veel ronde vormen moeilijker zijn
 ben ik gegaan voor een hoekigere design.
 
 ### eerste uitwerking
+
+![version 1 css](https://user-images.githubusercontent.com/90341211/224000853-8869f27d-3f49-4b7b-b0e3-f15d8680b0a7.png)
 
 in de eerste versie had ik een cockpit gemaakt sterren die via een animatie scalen, en daardoor de illusie geven dat ze 
 dichterbij komen, ook had ik een knop gemaakt om de speed te increasen door een has: selector te gebruiken.
@@ -76,17 +78,22 @@ dichterbij komen, ook had ik een knop gemaakt om de speed te increasen door een 
 
 ### Tweede uitwerking
 
+![version 2 css](https://github.com/ChrisvanHvA/css_panel/blob/main/images/css_v2.png?raw=true)
+
 In de tweede week had ik al vrij veel feedback gekregen, ik had ook een laser toegevoegd die kan schieten op basis
 van een input, ik kreeg wel als feedback dat ik deze wat mooier kon maken en dat de terugslag een beetje onrealistisch
 is, tot slot heb ik een gradient background aan space toegevoegd om het interessanter te maken om naar te kijken.
 
 ### Derde uitwerking
 
+![version 3 css](https://user-images.githubusercontent.com/90341211/224001133-cd00356f-9901-41f5-8191-57adcbb16e89.png)
+
+
 ik had gehoord dat je wel gebruik van 1 slider met JS mocht gebruiken, alleen had ik dit verkeerd begrepen dus had ik 
 eerst mijn eigen js slider geprogrameerd voordat ik hem vervangde met de JS slider die voorgeleverd was.
 De slider zorgt ervoor dat je de snelheid kan increasen relatief van waar de slider staat.
 Ook had ik de cockpit geupdate zodat hij er mooier er uit zag en betere scaling had, ik had ook geoefend met het toevoegen
-van een explosion bij het einde van de laser mar ik kreeg dit niet mooi genoeg om het er in te laten, tot slot had ik
+van een explosion bij het einde van de laser maar ik kreeg dit niet mooi genoeg om het er in te laten, tot slot had ik
 nog een planeet toegevoegd.
 
 
@@ -94,6 +101,9 @@ nog een planeet toegevoegd.
 
 
 ### Laatste iteratie
+
+![version 4 css](https://user-images.githubusercontent.com/90341211/224001215-eae552f4-2737-4f88-a14e-015559fa29ab.png)
+
 
 De laatste versie had een gestylede control panel met knopjes die feedback geven wanneer ze gedrukt zijn, ook ben ik de
 slider gaan stylen, momenteel zijn er wel alleen maar 2 browsers die dit supporten (Chrome en Firefox), hiernaast heb ik
